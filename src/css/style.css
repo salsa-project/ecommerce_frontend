@@ -1,27 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-:root{
+:root {
     --first-color: hsl(336, 88%, 61%);
-    --nav_height: 2.5rem;
-    --title-font: "Readex Pro";
+    --nav_height: 3.5rem;
+    --title-font: "Readex Pro", sans-serif;
+    --text-font: "Rubik", sans-serif;
     --title-color: hsl(250, 8%, 15%);
     --text-color: hsl(250, 8%, 35%);
     --body-color: hsl(250, 60%, 98%);
     --shadow: hsla(0, 0%, 15%, .1);
+    --page-margin: calc(100% - 40px);
     --scroll-bar-color: hsl(250, 12%, 90%);
     --scroll-thumb-color: hsl(250, 12%, 80%);
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: var(--text-font);
     color: var(--text-color);
 }
+
+h2 {
+    font-family: var(--title-font);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: var(--body-color);
 }
 
@@ -29,43 +39,48 @@ body{
 /* -----         ---- */
 /* -----  Header ---- */
 /* -----         ---- */
-header{
+header {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
 }
+
 /* -----  Navbar ---- */
-#nav_container{
+#nav_container {
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 3rem;
-    height: calc(var(--nav_height) + 1.5rem);
+    height: var(--nav_height);
     width: 100%;
     padding: 0px 40px;
     background-color: var(--body-color);
     box-shadow: 0 1px 4px var(--shadow);
     z-index: 3;
 }
-#logo_wrapper{
-    flex:1;
+
+#logo_wrapper {
+    flex: 1;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
-.nav_logo>img{
+
+.nav_logo>img {
     height: 30px;
     margin-top: 10px;
 }
-#logo_wrapper>p{
+
+#logo_wrapper>p {
     margin: 0px 5px;
     font-size: 13px;
     font-family: var(--title-font), sans-serif;
 }
-.nav_list{
-    flex:1.5;
+
+.nav_list {
+    flex: 1.5;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -73,68 +88,168 @@ header{
     column-gap: 1.5rem;
     list-style: none;
 }
-.nav_item a{
+
+.nav_item a {
     font-size: 14px;
     text-decoration: none;
     font-family: var(--title-font), sans-serif;
 }
-#nav_btns{
-    flex:1;
+
+#nav_btns {
+    flex: 1;
     display: flex;
-    justify-content: end;   
+    justify-content: end;
     align-items: center;
 }
-#nav-toggle{
+
+#nav-toggle {
     display: none;
 }
-.active-link{
+
+.active-link {
     color: var(--first-color);
 }
-.hide{
+
+.hide {
     position: absolute;
-    top: -100vh !important;
-    transition: 0.3s all ease;
+    transform: translateY(-100%);
+    transition: 0.3s transform ease;
 }
-.show{
+
+.show {
     position: absolute;
-    top: 0vh !important;
-    transition: 0.3s all ease;
+    transform: translateY(0%);
+    transition: 0.3s transform ease;
 }
+
 /* -----  Hero ---- */
-#hero{
+#hero {
     display: flex;
-    height: calc(100vh - var(--nav_height) - 1.8rem);
-    margin-top: calc(var(--nav_height) + 1.5rem);
-    background-color: aqua;
+    height: calc(100vh - var(--nav_height));
+    margin-top: calc(var(--nav_height));
+    background-color: var(--first-color);
 }
-.hero_sec{
+
+.hero_sec {
     flex: 1;
     height: 100%;
 }
-.hero_sec:nth-child(1)>img{
+
+.hero_sec:nth-child(1)>img {
     height: 100%;
 }
 
+/* Carousel */
+#carousel-items {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 
+/* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+#carousel-items::-webkit-scrollbar {
+    display: none;
+}
 
+.carousel-item {
+    position: relative;
+    height: 150px;
+    min-width: 150px;
+    max-width: 150px;
+}
+.carousel-item:hover{
+    transform: scale(1.05);
+}
+.carousel-item>img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 2px 3px var(--first-color);
+}
 
+.carousel-item>p {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    text-align: center;
+    transform: translateX(5px);
+}
 
-
-
+/* Cards Container */
+.title{
+    margin: 40px 0px 20px;
+    color: var(--first-color);
+    text-align: center;
+}
+#cards_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: var(--page-margin);
+    margin: 0px auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 23%;
+    margin-bottom: 10px;
+    border-radius: 13px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 1px 2px 3px rgba(100, 100, 100, 0.6);
+    overflow: hidden;
+    text-align: center;
+}
+.card>img{
+    width: 100%;
+    margin-bottom: 8px;
+    background-color: brown;
+}
+.card_title{
+    padding: 0px 5px;
+    font-size: 10pt;
+    font-family: var(--title-font);
+}
+.card-price{
+    padding: 10px 5px;
+    color: var(--first-color);
+    font-weight: 700;
+    direction: rtl;
+}
+.card_buy{
+    padding: 15px 0px;
+    color: white;
+    background-color: var(--first-color);
+    border-width: 0px;
+    font-family: var(--title-font);
+}
+.card_buy:hover{
+    color: var(--first-color);
+    background-color: rgba(100, 100, 100, 0.08);
+}
+.card_buy:active{
+    transform: scale(1.1);
+}
 
 
 
 /*=============== SCROLL BAR ===============*/
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: .60rem;
     background: var(--scroll-bar-color);
     border-radius: .5rem;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: var(--first-color);
     border-radius: .5rem;
 }
+
 /* ----- Break Points ----- */
 
 @media screen and (max-width: 767px) {
@@ -147,47 +262,55 @@ header{
         --small-font-size: .813rem;
         --smaller-font-size: .75rem;
     }
-    body{
-        margin: var(--nav_height) 0 0 0;
-    }
-    header{
-        height: calc(var(--nav_height) + 1rem);
-    }
-    #nav_container{
+
+    /* Navbar */
+    #nav_container {
         column-gap: 0rem;
+        height: var(--nav_height);
         margin: 0px 0px;
+        padding: 0px;
         z-index: 3;
     }
-    #logo_wrapper{
+
+    #logo_wrapper {
         flex: 1;
         flex-flow: row-reverse;
-        margin: 0px -50px -40px 0px;
+        margin: 0px -50px -50px 0px;
     }
-    .nav_logo>img{
+
+    .nav_logo>img {
         height: 50px;
     }
-    #logo_wrapper>p{
+
+    #logo_wrapper>p {
         display: none;
     }
-    .nav_list{
+
+    .nav_list {
         display: none;
     }
-    #nav_btns{
+
+    #nav_btns {
         flex: 1;
         position: relative;
         height: 100%;
     }
-    #nav-toggle{
+
+    #nav-toggle {
         display: flex;
         flex-flow: row-reverse;
     }
-    #nav-toggle-i{
+
+    #nav-toggle-i {
         margin-right: 20px;
         color: var(--first-color);
         font-size: 25pt;
     }
-    #nav_btns_menu{
+
+    #nav_btns_menu {
         position: absolute;
+        top: 0px;
+        right: 0px;
         height: 100vh;
         width: 100vw;
         display: flex;
@@ -196,7 +319,8 @@ header{
         background-color: var(--body-color);
         z-index: 2;
     }
-    #close_nav_menu{
+
+    #close_nav_menu {
         position: absolute;
         top: 25px;
         right: 25px;
@@ -204,30 +328,52 @@ header{
         border-radius: 50%;
         background-color: var(--first-color);
     }
-    .nav_list_drawer_wrapper{
+
+    .nav_list_drawer_wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 70%;
     }
-    .nav_list_drawer{
+
+    .nav_list_drawer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 70%;
         width: 100%;
     }
-    .nav_list_drawer>.nav_item{
+
+    .nav_list_drawer>.nav_item {
         text-align: center;
         list-style: none;
         width: 100%;
     }
-    .nav__link{
+
+    .nav__link {
         padding: 10px 20px;
     }
+
+    /* Hero */
+    #hero {
+        height: 300px;
+    }
+
+    /* Carousel */
+    #carousel-items {
+        justify-content: start;
+    }
+
+    /* Cards Container */
+    #cards_container{
+        justify-content: space-around;
+        gap: unset;
+        width: 100%;
+    }
+    .card{
+        width: 47%;
+    }
+    .card>img{
+        width: 100%;
+    }
 }
-
-
-
-
-
