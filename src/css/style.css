@@ -3,6 +3,7 @@
 
 :root {
     --first-color: hsl(336, 88%, 61%);
+    --first-color-alt: hsl(0, 88%, 61%);
     --nav_height: 3.5rem;
     --title-font: "Readex Pro", sans-serif;
     --text-font: "Rubik", sans-serif;
@@ -195,7 +196,7 @@ header {
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: 23%;
     margin-bottom: 10px;
     border-radius: 13px;
@@ -210,19 +211,32 @@ header {
     margin-bottom: 8px;
     background-color: brown;
 }
+.card>img:hover{
+    filter: grayscale(1);
+}
 .card_title{
     padding: 0px 5px;
     font-size: 10pt;
     font-family: var(--title-font);
 }
-.card-price{
-    padding: 10px 5px;
+.card-price, .card-old-price{
+    padding: 5px 0px 10px 0px;
     color: var(--first-color);
     font-weight: 700;
     direction: rtl;
 }
+.card-old-price{
+    padding: 0px 0px 0px 0px ;
+    margin-top: -5px;
+    color: lightgray;
+    text-decoration: line-through;
+}
+.hide-old-price{
+    display: none;
+}
 .card_buy{
     padding: 15px 0px;
+    margin-top: 10px;
     color: white;
     background-color: var(--first-color);
     border-width: 0px;
