@@ -22,7 +22,22 @@
     padding: 0px;
     font-family: var(--text-font);
     color: var(--text-color);
+
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
+
+.noselect {}
 
 h2 {
     font-family: var(--title-font);
@@ -36,6 +51,14 @@ body {
     background-color: var(--body-color);
 }
 
+
+.title {
+    margin: 100px 0px 30px;
+    color: var(--first-color);
+    font-size: 16pt;
+    font-weight: 500;
+    text-align: center;
+}
 
 /* -----         ---- */
 /* -----  Header ---- */
@@ -141,13 +164,28 @@ header {
 }
 
 /* Carousel */
+#carousel-container{
+    position: relative;
+}
 #carousel-items {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 3rem 1rem;
+    padding: 0 1rem 3rem;
     overflow-x: auto;
     overflow-y: hidden;
+}
+.carousel-items-dot-container{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    width: 30px;
+}
+.carousel-items-dot{
+    padding: 3px;
+    background-color: var(--first-color);
+    border-radius: 50%;
 }
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari, etc.) */
@@ -157,35 +195,41 @@ header {
 
 .carousel-item {
     position: relative;
-    height: 150px;
-    min-width: 150px;
+    height: 200px;
+    min-width: 250px;
     max-width: 150px;
+    cursor: pointer;
 }
-.carousel-item:hover{
+
+.carousel-item:hover {
     transform: scale(1.05);
 }
+
+.carousel-item:active {
+    transform: scale(1);
+}
+
 .carousel-item>img {
     height: 100%;
     width: 100%;
-    border-radius: 50%;
-    box-shadow: 1px 2px 3px var(--first-color);
+    background-color: var(--first-color);
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px var(--first-color);
 }
 
 .carousel-item>p {
     position: absolute;
-    bottom: -40px;
+    bottom: -30px;
     width: 100%;
+    color: var(--first-color);
+    font-family: var(--title-font);
     text-align: center;
     transform: translateX(5px);
 }
 
 /* Cards Container */
-.title{
-    margin: 40px 0px 20px;
-    color: var(--first-color);
-    text-align: center;
-}
-#cards_container{
+
+#cards_container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -193,10 +237,12 @@ header {
     width: var(--page-margin);
     margin: 0px auto;
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     width: 23%;
     margin-bottom: 10px;
     border-radius: 13px;
@@ -206,51 +252,119 @@ header {
     overflow: hidden;
     text-align: center;
 }
-.card>img{
+
+.card-discount {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 20px;
+    border-bottom-left-radius: 30px;
+    background-color: var(--first-color);
+    z-index: 1;
+}
+
+.card-discount-text {
+    color: white;
+    font-size: 10pt;
+    font-weight: 500;
+    font-family: var(--text-font);
+    direction: rtl;
+}
+
+.card>img {
     width: 100%;
     margin-bottom: 8px;
     background-color: brown;
 }
-.card>img:hover{
+
+.card>img:hover {
     filter: grayscale(1);
 }
-.card_title{
+
+.card_title {
     padding: 0px 5px;
     font-size: 10pt;
     font-family: var(--title-font);
 }
-.card-price, .card-old-price{
+
+.card-price,
+.card-old-price {
     padding: 5px 0px 10px 0px;
     color: var(--first-color);
     font-weight: 700;
     direction: rtl;
 }
-.card-old-price{
-    padding: 0px 0px 0px 0px ;
+
+.card-old-price {
+    padding: 0px 0px 0px 0px;
     margin-top: -5px;
-    color: lightgray;
+    color: rgba(100, 100, 100, 0.35);
     text-decoration: line-through;
 }
-.hide-old-price{
+
+.hide-old-price {
     display: none;
 }
-.card_buy{
+
+.card_buy {
     padding: 15px 0px;
     margin-top: 10px;
     color: white;
     background-color: var(--first-color);
     border-width: 0px;
     font-family: var(--title-font);
+    cursor: pointer;
 }
-.card_buy:hover{
+
+.card_buy:hover {
     color: var(--first-color);
     background-color: rgba(100, 100, 100, 0.08);
 }
-.card_buy:active{
+
+.card_buy:active {
     transform: scale(1.1);
 }
 
 
+footer{
+    margin-top: 100px;
+    border-top: 3px solid var(--first-color);
+}
+#footer-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 80px 0px 80px; 
+    direction: rtl;
+}
+.footer-section{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-section:nth-child(1) h3{
+    margin: 0px;
+    text-align: right;
+}
+.footer-section:nth-child(1) p{
+    margin: 20px 0px 20px;
+    cursor: pointer;
+}
+.footer-section:nth-child(1) p:hover{
+    color: var(--first-color);
+}
+.footer-section:nth-child(2){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer-section:nth-child(2) *{
+    text-decoration: none;
+    color: var(--first-color);
+}
+.footer-section:nth-child(2) p{
+    color: var(--text-color);
+    margin: 5px;
+}
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
@@ -374,20 +488,53 @@ header {
     }
 
     /* Carousel */
+    .carousel-items-dot-container{
+        right: 50%;
+    }
     #carousel-items {
         justify-content: start;
     }
 
     /* Cards Container */
-    #cards_container{
+    .title {
+        font-size: 14pt;
+        font-weight: 500;
+    }
+
+    #cards_container {
         justify-content: space-around;
         gap: unset;
         width: 100%;
     }
-    .card{
+
+    .card {
         width: 47%;
     }
-    .card>img{
+
+    .card>img {
         width: 100%;
     }
+
+
+
+
+
+
+    #footer-wrapper{
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+    .footer-section:nth-child(1){
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+    .footer-section div{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-section div .title{
+        text-align: center;
+    }
+    
 }
