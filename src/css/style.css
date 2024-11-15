@@ -321,7 +321,9 @@ header {
     background-color: var(--first-color);
     border-width: 0px;
     font-family: var(--title-font);
+    font-size: 10pt;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .card_buy:hover {
@@ -983,5 +985,13 @@ ellipse,
 
     .form-order-info:nth-child(even) {
         width: 35%;
+    }
+
+    /* single Galery */
+    #product-other-images{
+        overflow-x: auto;
+    }
+    #product-other-images img{
+        width: 80px;
     }
 }
