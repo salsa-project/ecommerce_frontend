@@ -64,6 +64,10 @@ h2 {
     font-size: var(--h2-font-size);
 }
 
+img{
+filter: brightness(1.05);
+}
+
 .title {
     margin: 100px 0px 30px;
     color: var(--first-color);
@@ -280,7 +284,8 @@ header {
 }
 
 .card>img {
-    width: 100%;
+    height: 301px;
+width: 301px;
     margin-bottom: 8px;
     background-color: brown;
 }
