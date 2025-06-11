@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="icon" type="image/png" href="src/images/lamlem_favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>الأسئلة الشائعة - LamLem</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav_container">
+            <div id="logo_wrapper">
+                <a href="index.html" class="nav_logo">
+                     <svg class="lamlem-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="30" font-family="Arial, 'Readex Pro', sans-serif" font-size="28px" font-weight="600" fill="#F53B57">لملم</text>
+                        <circle cx="90" cy="12" r="5" fill="#F53B57"/>
+                    </svg>
+                </a>
+            </div>
+
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a href="index.html" class="nav__link">الرئيسية</a>
+                </li>
+                <li class="nav_item">
+                    <a href="shop.html" class="nav__link">المتجر</a>
+                </li>
+                <li class="nav_item">
+                    <a href="faq.html" class="nav__link active-link">الأسئلة الشائعة</a>
+                </li>
+                <li class="nav_item">
+                    <a href="contact.html" class="nav__link">إتصل بنا</a>
+                </li>
+            </ul>
+
+            <div id="nav_btns">
+                <a href="cart.html" class="cart-icon-link" aria-label="عرض سلة التسوق">
+                    <i class='bx bx-cart'></i>
+                    <span id="cart-counter-badge" class="cart-counter-badge" aria-live="polite">0</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-menu" id="nav-toggle-i"></i>
+                </div>
+                <div id="nav_btns_menu" class="hide">
+                    <p id="close_nav_menu"></p>
+                    <div class="nav_list_drawer_wrapper">
+                        <ul class="nav_list_drawer">
+                            <li class="nav_item">
+                                <a href="index.html" class="nav__link">الرئيسية</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="shop.html" class="nav__link">المتجر</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="faq.html" class="nav__link active-link">الأسئلة الشائعة</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="contact.html" class="nav__link">إتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="title">الأسئلة الشائعة</h2>
+
+    <main class="page-content-area" id="faq_container">
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                <span>كيف يمكنني تتبع طلبي؟</span>
+                <i class='bx bx-chevron-down faq-icon'></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region">
+                <p>بعد شحن طلبك، ستتلقى رسالة بريد إلكتروني تحتوي على رقم تتبع. يمكنك استخدام هذا الرقم لتتبع حالة شحنتك عبر موقع شركة الشحن.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                <span>ما هي سياسة الإرجاع والاستبدال؟</span>
+                <i class='bx bx-chevron-down faq-icon'></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region">
+                <p>نحن نقدم سياسة إرجاع لمدة 14 يومًا للمنتجات غير المستخدمة وفي عبواتها الأصلية. يرجى مراجعة صفحة "الشحن والتسليم" لمزيد من التفاصيل أو الاتصال بخدمة العملاء.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                <span>كم من الوقت يستغرق وصول طلبي؟</span>
+                <i class='bx bx-chevron-down faq-icon'></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region">
+                <p>يعتمد وقت التسليم على موقعك وطريقة الشحن المختارة. عادةً ما تستغرق الطلبات المحلية من 3 إلى 5 أيام عمل. يمكنك التحقق من الوقت المقدر للتسليم أثناء عملية الدفع.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                <span>هل تقدمون الشحن الدولي؟</span>
+                <i class='bx bx-chevron-down faq-icon'></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region">
+                <p>حاليًا، نحن نقوم بالشحن داخل [اسم بلدك/المنطقة] فقط. نأمل في توسيع خدماتنا لتشمل الشحن الدولي في المستقبل.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                <span>ما هي طرق الدفع المقبولة؟</span>
+                <i class='bx bx-chevron-down faq-icon'></i>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region">
+                <p>نحن نقبل الدفع عند الاستلام بالإضافة إلى طرق الدفع الإلكترونية مثل البطاقات الائتمانية (Visa, MasterCard) و PayPal. جميع المعاملات آمنة ومأمونة.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-wrapper">
+            <div class="footer-section">
+                <div>
+                    <h3 class="title">عن المتجر</h3>
+                        <p><a href="#">من نحن</a></p>
+                        <p><a href="#">طرق الدفع</a></p>
+                        <p><a href="#">الشحن والتسليم</a></p>
+                </div>
+                <div>
+                    <h3 class="title">تواصل معنا</h3>
+                        <p><a href="faq.html">أسئلة شائعة</a></p>
+                        <p><a href="contact.html">اتصل بنا</a></p>
+                        <p>هاتف : <a href="tel:0660660606">0660660606</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <a href="index.html" class="footer_logo_link">
+                    <svg class="lamlem-logo-svg footer-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="30" font-family="Arial, 'Readex Pro', sans-serif" font-size="28px" font-weight="600" fill="#F53B57">لملم</text>
+                        <circle cx="90" cy="12" r="5" fill="#F53B57"/>
+                    </svg>
+                </a>
+                <p>لم حوايجك | <a href="admin.html" style="font-size: 0.8em; color: var(--text-color);">Admin Panel</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>

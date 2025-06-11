@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="icon" type="image/png" href="src/images/lamlem_favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>إتصل بنا - LamLem</title>
+</head>
+
+<body>
+    <header>
+        <nav id="nav_container">
+            <div id="logo_wrapper">
+                <a href="index.html" class="nav_logo">
+                     <svg class="lamlem-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="30" font-family="Arial, 'Readex Pro', sans-serif" font-size="28px" font-weight="600" fill="#F53B57">لملم</text>
+                        <circle cx="90" cy="12" r="5" fill="#F53B57"/>
+                    </svg>
+                </a>
+            </div>
+
+            <ul class="nav_list">
+                <li class="nav_item">
+                    <a href="index.html" class="nav__link">الرئيسية</a>
+                </li>
+                <li class="nav_item">
+                    <a href="shop.html" class="nav__link">المتجر</a>
+                </li>
+                <li class="nav_item">
+                    <a href="faq.html" class="nav__link">الأسئلة الشائعة</a>
+                </li>
+                <li class="nav_item">
+                    <a href="contact.html" class="nav__link active-link">إتصل بنا</a>
+                </li>
+            </ul>
+
+            <div id="nav_btns">
+                <a href="cart.html" class="cart-icon-link" aria-label="عرض سلة التسوق">
+                    <i class='bx bx-cart'></i>
+                    <span id="cart-counter-badge" class="cart-counter-badge" aria-live="polite">0</span>
+                </a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="bx bx-menu" id="nav-toggle-i"></i>
+                </div>
+                <div id="nav_btns_menu" class="hide">
+                    <p id="close_nav_menu"></p>
+                    <div class="nav_list_drawer_wrapper">
+                        <ul class="nav_list_drawer">
+                            <li class="nav_item">
+                                <a href="index.html" class="nav__link">الرئيسية</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="shop.html" class="nav__link">المتجر</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="faq.html" class="nav__link">الأسئلة الشائعة</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="contact.html" class="nav__link active-link">إتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2 class="title">إتصل بنا</h2>
+
+    <main class="page-content-area" id="contact_page_content">
+        <div id="contact_container_flex">
+            <div class="contact-form-section">
+                <h3>أرسل لنا رسالة</h3>
+                <form class="from-inputs-holder contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك (محاكاة)');">
+                    <div class="from-input-div from-input-div-full">
+                        <input class="form-input" type="text" name="contact_full_name" id="contact_full_name" placeholder="" required="" autocomplete="name">
+                        <label for="contact_full_name">الاسم الكامل</label>
+                    </div>
+                    <div class="from-input-div from-input-div-full">
+                        <input class="form-input" type="email" name="contact_email" id="contact_email" placeholder="" required="" autocomplete="email">
+                        <label for="contact_email">البريد الإلكتروني</label>
+                    </div>
+                    <div class="from-input-div from-input-div-full">
+                        <input class="form-input" type="text" name="contact_subject" id="contact_subject" placeholder="" required="" autocomplete="off">
+                        <label for="contact_subject">الموضوع</label>
+                    </div>
+                    <div class="from-input-div from-input-div-full">
+                        <textarea class="form-input" name="contact_message" id="contact_message" placeholder="" required=""></textarea>
+                        <label for="contact_message">رسالتك</label>
+                    </div>
+                    <input class="form-order-btn" type="submit" value="إرسال الرسالة">
+                </form>
+            </div>
+
+            <div class="contact-info-section">
+                <h3>معلومات الاتصال</h3>
+                <p><i class='bx bxs-map'></i> شارع الحرية، رقم 123، الجزائر العاصمة، الجزائر</p>
+                <p><i class='bx bxs-phone'></i> الهاتف: 0660660606</p>
+                <p><i class='bx bxs-envelope'></i> البريد الإلكتروني: support@lamlem.dz</p>
+                <p><i class='bx bxs-time-five'></i> ساعات العمل: الأحد - الخميس، 9:00 صباحًا - 5:00 مساءً</p>
+                 <div class="contact-map">
+                    <h3>موقعنا على الخريطة</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204809.2072868688!2d2.9414058905658953!3d36.70867292520058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb2739a99d711%3A0x474912993978a82c!2sAlgiers!5e0!3m2!1sen!2sdz!4v1700000000000!5m2!1sen!2sdz" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="موقعنا على الخريطة">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-wrapper">
+            <div class="footer-section">
+                <div>
+                    <h3 class="title">عن المتجر</h3>
+                        <p><a href="#">من نحن</a></p>
+                        <p><a href="#">طرق الدفع</a></p>
+                        <p><a href="#">الشحن والتسليم</a></p>
+                </div>
+                <div>
+                    <h3 class="title">تواصل معنا</h3>
+                        <p><a href="faq.html">أسئلة شائعة</a></p>
+                        <p><a href="contact.html">اتصل بنا</a></p>
+                        <p>هاتف : <a href="tel:0660660606">0660660606</a></p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <a href="index.html" class="footer_logo_link">
+                    <svg class="lamlem-logo-svg footer-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="30" font-family="Arial, 'Readex Pro', sans-serif" font-size="28px" font-weight="600" fill="#F53B57">لملم</text>
+                        <circle cx="90" cy="12" r="5" fill="#F53B57"/>
+                    </svg>
+                </a>
+                <p>لم حوايجك | <a href="admin.html" style="font-size: 0.8em; color: var(--text-color);">Admin Panel</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>

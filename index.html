@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="src/css/style.css">
-<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="icon" type="image/png" href="src/images/lamlem_favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <title>LamLem</title>
 </head>
@@ -16,9 +16,11 @@
         <nav id="nav_container">
             <div id="logo_wrapper">
                 <a href="index.html" class="nav_logo">
-                    <img src="/src/images/logo.png" alt="" srcset="">
+                    <svg class="lamlem-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="30" font-family="Arial, 'Readex Pro', sans-serif" font-size="28px" font-weight="600" fill="#F53B57">لملم</text>
+                        <circle cx="90" cy="12" r="5" fill="#F53B57"/>
+                    </svg>
                 </a>
-                <p>لملم</p>
             </div>
 
             <ul class="nav_list">
@@ -39,105 +41,224 @@
             </ul>
 
             <div id="nav_btns">
+                 <a href="cart.html" class="cart-icon-link" aria-label="عرض سلة التسوق">
+                    <i class='bx bx-cart'></i>
+                    <span id="cart-counter-badge" class="cart-counter-badge" aria-live="polite">0</span>
+                </a>
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="bx bx-menu" id="nav-toggle-i"></i>
                 </div>
                 <div id="nav_btns_menu" class="hide">
-                    <p id="close_nav_menu"></p>
+                    <p id="close_nav_menu" aria-label="إغلاق القائمة"></p>
                     <div class="nav_list_drawer_wrapper">
                         <ul class="nav_list_drawer">
                             <li class="nav_item">
-                                <a href="single.html" class="nav__link active-link">single</a>
-                            </li>
-                            <li class="nav_item">
                                 <a href="index.html" class="nav__link active-link">الرئيسية</a>
                             </li>
-
                             <li class="nav_item">
                                 <a href="shop.html" class="nav__link">المتجر</a>
                             </li>
-
                             <li class="nav_item">
                                 <a href="faq.html" class="nav__link">الأسئلة الشائعة</a>
                             </li>
-
                             <li class="nav_item">
                                 <a href="contact.html" class="nav__link">إتصل بنا</a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </nav>
 
         <section id="hero">
-            <div class="hero_sec">
+            <div class="hero_sec hero_sec_img">
+                 <img src="https://images.unsplash.com/photo-1630396592737-716bd8fc70a2?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="أكياس التسوق الملونة">
             </div>
-            <div class="hero_sec">
-
+            <div class="hero_sec hero_sec_content">
+                <h1 class="hero_title">أحدث التشكيلات تصل إليك</h1>
+                <p class="hero_subtitle">اكتشف مجموعتنا الواسعة من المنتجات عالية الجودة المختارة بعناية لتناسب جميع احتياجاتك وأذواقك.</p>
+                <a href="shop.html" class="hero_cta_button">تسوق الآن</a>
             </div>
         </section>
     </header>
 
 
-
     <h2 class="title">تصفح قائمة المنتجات الأكثر رواجا</h2>
-    <div id="cards_container">
-        <div class="card">
+    <div id="cards_container" class="home-wrapper">
+        <div class="card" 
+             data-product-name="مناظير سهلة التركيز" 
+             data-product-price="1500" 
+             data-product-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop"
+             data-category="electronics">
             <div class="card-discount">
                 <p class="card-discount-text">تخفيض 30%</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop" alt="Smart watch product">
+            <a href="single.html?name=مناظير%20سهلة%20التركيز&price=1500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1523275335684-37898b6baf30%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop" alt="مناظير سهلة التركيز">
+            </a>
             <p class="card_title">مناظير سهلة التركيز</p>
             <p class="card-price">1500 دج</p>
             <p class="card-old-price">2200 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=مناظير%20سهلة%20التركيز&price=1500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1523275335684-37898b6baf30%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="مناظير سهلة التركيز" 
+                        data-product-price="1500" 
+                        data-product-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop"
+                        aria-label="أضف مناظير سهلة التركيز إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop" alt="Headphones product">
-            <p class="card_title">مناظير سهلة التركيز</p>
+        <div class="card" 
+             data-product-name="سماعات رأس لاسلكية" 
+             data-product-price="7600" 
+             data-product-image="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop"
+             data-category="electronics">
+            <a href="single.html?name=سماعات%20رأس%20لاسلكية&price=7600&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1546868871-7041f2a55e12%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop" alt="سماعات رأس لاسلكية">
+            </a>
+            <p class="card_title">سماعات رأس لاسلكية</p>
             <p class="card-price">7600 دج</p>
             <p class="card-old-price">2200 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=سماعات%20رأس%20لاسلكية&price=7600&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1546868871-7041f2a55e12%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="سماعات رأس لاسلكية" 
+                        data-product-price="7600" 
+                        data-product-image="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop"
+                        aria-label="أضف سماعات رأس لاسلكية إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop" alt="Sunglasses product">
-            <p class="card_title">مناظير سهلة التركيز</p>
+        <div class="card" 
+             data-product-name="نظارات شمسية أنيقة" 
+             data-product-price="3200" 
+             data-product-image="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop"
+             data-category="accessories">
+            <a href="single.html?name=نظارات%20شمسية%20أنيقة&price=3200&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1572635196237-14b3f281503f%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop" alt="نظارات شمسية أنيقة">
+            </a>
+            <p class="card_title">نظارات شمسية أنيقة</p>
             <p class="card-price">3200 دج</p>
             <p class="card-old-price hide-old-price">2200 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=نظارات%20شمسية%20أنيقة&price=3200&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1572635196237-14b3f281503f%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="نظارات شمسية أنيقة" 
+                        data-product-price="3200" 
+                        data-product-image="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop"
+                        aria-label="أضف نظارات شمسية أنيقة إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-        <img src="https://www.dummyimage.com/301x301" alt="Sneakers product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
+        <div class="card" 
+             data-product-name="حذاء رياضي عصري" 
+             data-product-price="4500" 
+             data-product-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop"
+             data-category="fashion">
+            <a href="single.html?name=حذاء%20رياضي%20عصري&price=4500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1542291026-7eec264c27ff%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop" alt="حذاء رياضي عصري">
+            </a>
+            <p class="card_title">حذاء رياضي عصري</p>
+            <p class="card-price">4500 دج</p>
             <p class="card-old-price hide-old-price">2200 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=حذاء%20رياضي%20عصري&price=4500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1542291026-7eec264c27ff%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="حذاء رياضي عصري" 
+                        data-product-price="4500" 
+                        data-product-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop"
+                        aria-label="أضف حذاء رياضي عصري إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=301&h=301&fit=crop" alt="Perfume product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+        <div class="card" 
+             data-product-name="عطر جذاب للجنسين" 
+             data-product-price="2800" 
+             data-product-image="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=301&h=301&fit=crop"
+             data-category="beauty">
+            <a href="single.html?name=عطر%20جذاب%20للجنسين&price=2800&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1585386959984-a4155224a1ad%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=301&h=301&fit=crop" alt="عطر جذاب للجنسين">
+            </a>
+            <p class="card_title">عطر جذاب للجنسين</p>
+            <p class="card-price">2800 دج</p>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=عطر%20جذاب%20للجنسين&price=2800&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1585386959984-a4155224a1ad%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="عطر جذاب للجنسين" 
+                        data-product-price="2800" 
+                        data-product-image="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=301&h=301&fit=crop"
+                        aria-label="أضف عطر جذاب للجنسين إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=301&h=301&fit=crop" alt="Athletic shoes product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+        <div class="card" 
+             data-product-name="حذاء رياضة للجري" 
+             data-product-price="5200" 
+             data-product-image="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=301&h=301&fit=crop"
+             data-category="fashion">
+            <a href="single.html?name=حذاء%20رياضة%20للجري&price=5200&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1491553895911-0055eca6402d%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=301&h=301&fit=crop" alt="حذاء رياضة للجري">
+            </a>
+            <p class="card_title">حذاء رياضة للجري</p>
+            <p class="card-price">5200 دج</p>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=حذاء%20رياضة%20للجري&price=5200&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1491553895911-0055eca6402d%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="حذاء رياضة للجري" 
+                        data-product-price="5200" 
+                        data-product-image="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=301&h=301&fit=crop"
+                        aria-label="أضف حذاء رياضة للجري إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=301&h=301&fit=crop" alt="Wireless headphones product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+        <div class="card" 
+             data-product-name="سماعات أذن بلوتوث" 
+             data-product-price="3000" 
+             data-product-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=301&h=301&fit=crop"
+             data-category="electronics">
+            <a href="single.html?name=سماعات%20أذن%20بلوتوث&price=3000&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1505740420928-5e560c06d30e%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=301&h=301&fit=crop" alt="سماعات أذن بلوتوث">
+            </a>
+            <p class="card_title">سماعات أذن بلوتوث</p>
+            <p class="card-price">3000 دج</p>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=سماعات%20أذن%20بلوتوث&price=3000&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1505740420928-5e560c06d30e%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="سماعات أذن بلوتوث" 
+                        data-product-price="3000" 
+                        data-product-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=301&h=301&fit=crop"
+                        aria-label="أضف سماعات أذن بلوتوث إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=301&h=301&fit=crop" alt="Camera product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <a href="single.html" class="card_buy">إشتري اللآن</a>
+        <div class="card" 
+             data-product-name="كاميرا فورية كلاسيكية" 
+             data-product-price="9500" 
+             data-product-image="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=301&h=301&fit=crop"
+             data-category="electronics">
+            <a href="single.html?name=كاميرا%20فورية%20كلاسيكية&price=9500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1526170375885-4d8ecf77b99f%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=301&h=301&fit=crop" alt="كاميرا فورية كلاسيكية">
+            </a>
+            <p class="card_title">كاميرا فورية كلاسيكية</p>
+            <p class="card-price">9500 دج</p>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=كاميرا%20فورية%20كلاسيكية&price=9500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1526170375885-4d8ecf77b99f%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="كاميرا فورية كلاسيكية" 
+                        data-product-price="9500" 
+                        data-product-image="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=301&h=301&fit=crop"
+                        aria-label="أضف كاميرا فورية كلاسيكية إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -147,116 +268,152 @@
         <div class="carousel-item">
             <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=301&h=301&fit=crop" alt="Clothes category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">أزياء رجالية</a>
             </div>
         </div>
         <div class="carousel-item">
             <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=301&h=301&fit=crop" alt="Fashion category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">أزياء نسائية</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=301&h=301&fit=crop" alt="Electronics category">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=301&h=301&fit=crop" alt="Electronics category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">أثاث منزلي</a>
             </div>
         </div>
         <div class="carousel-item">
             <img src="https://images.unsplash.com/photo-1511556820780-d912e42b4980?w=301&h=301&fit=crop" alt="Watches category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">ساعات فاخرة</a>
             </div>
         </div>
         <div class="carousel-item">
             <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=301&h=301&fit=crop" alt="Sneakers category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">أحذية رياضية</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1505740106531-4243f3831c78?w=301&h=301&fit=crop" alt="Accessories category">
+            <img src="https://images.unsplash.com/photo-1512496006059-f08666798493?w=301&h=301&fit=crop" alt="Accessories category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">إكسسوارات</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=301&h=301&fit=crop" alt="Bags category">
+            <img src="https://images.unsplash.com/photo-1587563871167-1abc9c8eda6a?w=301&h=301&fit=crop" alt="Bags category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">إلكترونيات</a>
             </div>
         </div>
         <div class="carousel-item">
             <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=301&h=301&fit=crop" alt="Phone category">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">هواتف ذكية</a>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=301&h=301&fit=crop" alt="Clothing category">
+            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=301&h=301&fit=crop" alt="Home Decor">
             <div class="carousel-label">
-                <a href="">ألبسة رجالية</a>
+                <a href="shop.html">ديكور منزلي</a>
             </div>
         </div>
     </div>
 
 
-    <h2 class="title">تصفح قائمة المنتجات الأكثر رواجا</h2>
-    <div id="cards_container">
-        <div class="card">
+    <h2 class="title">منتجات مميزة أخرى</h2>
+    <div id="cards_container_featured" class="home-wrapper"> 
+        <div class="card" 
+             data-product-name="مناظير سهلة التركيز (مميز)" 
+             data-product-price="1500" 
+             data-product-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop"
+             data-category="electronics">
             <div class="card-discount">
                 <p class="card-discount-text">تخفيض 30%</p>
             </div>
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop" alt="Smart watch product">
-            <p class="card_title">مناظير سهلة التركيز</p>
+            <a href="single.html?name=مناظير%20سهلة%20التركيز%20(مميز)&price=1500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1523275335684-37898b6baf30%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop" alt="مناظير سهلة التركيز (مميز)">
+            </a>
+            <p class="card_title">مناظير سهلة التركيز (مميز)</p>
             <p class="card-price">1500 دج</p>
             <p class="card-old-price">2200 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=مناظير%20سهلة%20التركيز%20(مميز)&price=1500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1523275335684-37898b6baf30%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="مناظير سهلة التركيز (مميز)" 
+                        data-product-price="1500" 
+                        data-product-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=301&h=301&fit=crop"
+                        aria-label="أضف مناظير سهلة التركيز (مميز) إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop" alt="Headphones product">
-            <p class="card_title">مناظير سهلة التركيز</p>
+        <div class="card" 
+             data-product-name="سماعات رأس لاسلكية (مميز)" 
+             data-product-price="7600" 
+             data-product-image="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop"
+             data-category="electronics">
+            <a href="single.html?name=سماعات%20رأس%20لاسلكية%20(مميز)&price=7600&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1546868871-7041f2a55e12%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop" alt="سماعات رأس لاسلكية (مميز)">
+            </a>
+            <p class="card_title">سماعات رأس لاسلكية (مميز)</p>
             <p class="card-price">7600 دج</p>
             <p class="card-old-price">2200 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=سماعات%20رأس%20لاسلكية%20(مميز)&price=7600&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1546868871-7041f2a55e12%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="سماعات رأس لاسلكية (مميز)" 
+                        data-product-price="7600" 
+                        data-product-image="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=301&h=301&fit=crop"
+                        aria-label="أضف سماعات رأس لاسلكية (مميز) إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop" alt="Sunglasses product">
-            <p class="card_title">مناظير سهلة التركيز</p>
+        <div class="card" 
+             data-product-name="نظارات شمسية أنيقة (مميز)" 
+             data-product-price="3200" 
+             data-product-image="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop"
+             data-category="accessories">
+             <a href="single.html?name=نظارات%20شمسية%20أنيقة%20(مميز)&price=3200&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1572635196237-14b3f281503f%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop" alt="نظارات شمسية أنيقة (مميز)">
+            </a>
+            <p class="card_title">نظارات شمسية أنيقة (مميز)</p>
             <p class="card-price">3200 دج</p>
             <p class="card-old-price hide-old-price">2200 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=نظارات%20شمسية%20أنيقة%20(مميز)&price=3200&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1572635196237-14b3f281503f%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="نظارات شمسية أنيقة (مميز)" 
+                        data-product-price="3200" 
+                        data-product-image="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=301&h=301&fit=crop"
+                        aria-label="أضف نظارات شمسية أنيقة (مميز) إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop" alt="Sneakers product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
+        <div class="card" 
+             data-product-name="حذاء رياضي عصري (مميز)" 
+             data-product-price="4500" 
+             data-product-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop"
+             data-category="fashion">
+            <a href="single.html?name=حذاء%20رياضي%20عصري%20(مميز)&price=4500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1542291026-7eec264c27ff%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-image-link">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop" alt="حذاء رياضي عصري (مميز)">
+            </a>
+            <p class="card_title">حذاء رياضي عصري (مميز)</p>
+            <p class="card-price">4500 دج</p>
             <p class="card-old-price hide-old-price">2200 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=301&h=301&fit=crop" alt="Perfume product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=301&h=301&fit=crop" alt="Athletic shoes product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=301&h=301&fit=crop" alt="Wireless headphones product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=301&h=301&fit=crop" alt="Camera product">
-            <p class="card_title">مناظير سهلة التركيز</p>
-            <p class="card-price">12 دج</p>
-            <button class="card_buy">إشتري اللآن</button>
+            <div class="card-actions-wrapper">
+                <a href="single.html?name=حذاء%20رياضي%20عصري%20(مميز)&price=4500&image=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1542291026-7eec264c27ff%3Fw%3D301%26h%3D301%26fit%3Dcrop" class="card-action-preview">معاينة</a>
+                <button class="card-action-add-to-cart add-to-cart-btn" 
+                        data-product-name="حذاء رياضي عصري (مميز)" 
+                        data-product-price="4500" 
+                        data-product-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=301&h=301&fit=crop"
+                        aria-label="أضف حذاء رياضي عصري (مميز) إلى السلة">
+                    <i class='bx bx-cart-add'></i>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -265,23 +422,26 @@
         <div id="footer-wrapper">
             <div class="footer-section">
                 <div>
-                    <h3 class="title">عن المتجر</h2>
-                        <p>من نحن</p>
-                        <p>طرق الدفع</p>
-                        <p>الشحن والتسليم</p>
+                    <h3 class="title">عن المتجر</h3>
+                        <p><a href="#">من نحن</a></p>
+                        <p><a href="#">طرق الدفع</a></p>
+                        <p><a href="#">الشحن والتسليم</a></p>
                 </div>
                 <div>
-                    <h3 class="title">تواصل معنا</h2>
-                        <p>أسئلة شائعة</p>
-                        <p>اتصل بنا</p>
-                        <p>هاتف : 0660660606</p>
+                    <h3 class="title">تواصل معنا</h3>
+                        <p><a href="faq.html">أسئلة شائعة</a></p>
+                        <p><a href="contact.html">اتصل بنا</a></p>
+                        <p>هاتف : <a href="tel:0660660606">0660660606</a></p>
                 </div>
             </div>
             <div class="footer-section">
-                <a href="/index.html">
-                    <h1>LemLam</h1>
+                 <a href="index.html" class="footer_logo_link">
+                    <svg class="lamlem-logo-svg footer-logo-svg" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="30" font-family="Arial, 'Readex Pro', sans-serif" font-size="28px" font-weight="600" fill="#F53B57">لملم</text>
+                        <circle cx="90" cy="12" r="5" fill="#F53B57"/>
+                    </svg>
                 </a>
-                <p>لم حوايجك </p>
+                <p>لم حوايجك | <a href="admin.html" style="font-size: 0.8em; color: var(--text-color);">Admin Panel</a></p>
             </div>
         </div>
     </footer>
